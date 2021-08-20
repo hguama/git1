@@ -18,4 +18,11 @@ public class myController {
         return suma;
     }
 
+    @PostMapping("restar")
+    public int restar(@RequestBody Map<String,Integer> req){
+        int resta=req.get("a")-req.get("b");
+
+        return resta;
+    }
+
 }
