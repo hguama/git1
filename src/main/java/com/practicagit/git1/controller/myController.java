@@ -11,5 +11,11 @@ import java.util.Map;
 @RequestMapping("/api")
 public class myController {
 
+    @PostMapping("sumar")
+    public int sumar(@RequestBody Map<String,Integer> req){
+        int suma=req.get("a")+req.get("b");
+
+        return suma;
+    }
 
 }
